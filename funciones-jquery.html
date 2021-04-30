@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Funciones JQuery</title>
+
+    <script>
+        $(document).ready(function(){
+            $("#hide").on("click", function(){
+                $("#parrafo1").hide();
+            });
+            $("#show").on("click", function(){
+                $("#parrafo1").show();
+            });
+            $("#toggle").on("click", function(){
+                $("#parrafo1").toggle();
+            });
+            //salto
+            $("#slidedown").on("click", function(){
+                $("#parrafo2").slideDown();
+            });
+            $("#slideup").on("click", function(){
+                $("#parrafo2").slideUp();
+            });
+            $("#slidetoggle").on("click", function(){
+                $("#parrafo2").slideToggle();
+            });
+            //salto
+            $("#fadein").on("click", function(){
+                $("#parrafo3").fadeIn();
+            });
+            $("#fadeout").on("click", function(){
+                $("#parrafo3").fadeOut();
+            });
+            //salto
+            $("#addclass1").on("click", function(){
+                $("#parrafo4").addClass("rojo");
+            });
+            $("#addclass2").on("click", function(){
+                $("#parrafo4").addClass("grande26");
+            });
+            $("#addclass3").on("click", function(){
+                $("#parrafo4").addClass("pequeno10");
+            });
+            //salto
+            $("#before").on("click", function(){
+                $("#parrafo5").before("texto insertado con before");
+            });
+            $("#after").on("click", function(){
+                $("#parrafo5").after("texto insertado con after");
+            });
+            $("#append").on("click", function(){
+                $("#parrafo5").append("texto insertado con append");
+            });
+            //salto
+            $("#html").on("click", function(){
+                $("#parrafo6").html("texto insertado con html");
+            });
+            $("#text").on("click", function(){
+                $("#parrafo6").text("texto insertado con text");
+            });
+            $("#attr").on("click", function(){
+                alert($("#parrafo6").attr("src","img/mario.gif"));
+            });
+
+
+        })
+
+
+    </script>
+    <style type="text/css">
+        .rojo { color: red; }
+        .grande26 {font-size: 26px;}
+        .pequeno10 {font-size: 10px;}
+    </style>
+
+</head>
+<body>
+    <div class="container bg-light p-2 align">
+        <h1 class="display-3">Funciones en JQuery</h1>
+        <hr>
+        <div>  
+            <h2 class="display-6">Hide-Show-Toggle</h2>      
+            <button id="hide" class="btn btn-primary">Hide</button>
+            <button id="show" class="btn btn-primary">show</button>
+            <button id="toggle" class="btn btn-primary">toggle</button>
+            <p id="parrafo1" class="lead">Clickee en los botones para interactuar con este párrafo</p>
+        </div>
+        <hr>
+        <div>
+            <h2 class="display-6">slideDown-slideUP-slideToggle</h2>        
+            <button id="slidedown" class="btn btn-primary">slideDown</button>
+            <button id="slideup" class="btn btn-primary">slideUp</button>
+            <button id="slidetoggle" class="btn btn-primary">slideToggle</button>
+            <p id="parrafo2" class="lead">Clickee en los botones para interactuar con este párrafo</p>
+        </div>
+        <hr>
+        <div>
+            <h2 class="display-6">fadeIn - fadeOut</h2>        
+            <button id="fadein" class="btn btn-primary">fadeIn</button>
+            <button id="fadeout" class="btn btn-primary">fadeOut</button>
+            <p id="parrafo3" class="lead">Clickee en los botones para interactuar con este párrafo</p>
+        </div>
+        <hr>
+        <div>
+            <h2 class="display-6">addClass</h2>        
+            <button id="addclass1" class="btn btn-primary">addclass(rojo)</button>
+            <button id="addclass2" class="btn btn-primary">addclass(letra grande)</button>
+            <button id="addclass3" class="btn btn-primary">addclass(letra pequeña)</button>
+            <p id="parrafo4" class="lead">Clickee en los botones para interactuar con este párrafo</p>
+        </div>
+        <hr>
+        <div>
+            <h2 class="display-6">before after</h2>        
+            <button id="before" class="btn btn-primary">before</button>
+            <button id="after" class="btn btn-primary">after</button>
+            <button id="append" class="btn btn-primary">append</button>
+            <p id="parrafo5" class="lead"><--Clickee en los botones para interactuar con este párrafo--></p>
+        </div>
+        <div>
+            <h2 class="display-6">html text attr</h2>        
+            <button id="html" class="btn btn-primary">html</button>
+            <button id="text" class="btn btn-primary">text</button>
+            <button id="attr" class="btn btn-primary">attr</button>
+            <p id="parrafo6" class="lead"><--Clickee en los botones para interactuar con este párrafo--></p>
+        </div>
+
+
+    </div>
+</body>
+    
+</html>
